@@ -16,9 +16,9 @@ from datasets.itop import ITOPDataset
 #######################################################################################
 # Note,
 # Run in project root direcotry(ROOT_DIR) with:
-# PYTHONPATH=./ python experiments/msra-subject3/main.py
+# PYTHONPATH=./ python experiments/main.py
 # 
-# This script will train model on MSRA hand datasets, save checkpoints to ROOT_DIR/checkpoint,
+# This script will train model on ITOP hand datasets, save checkpoints to ROOT_DIR/checkpoint,
 # and save test results(test_res.txt) and fit results(fit_res.txt) to ROOT_DIR.
 #
 
