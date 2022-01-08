@@ -11,25 +11,12 @@ def pixel2world(x, y, z, img_width, img_height, fx, fy):
     return w_x, w_y, w_z
 
 
-# def world2pixel(x, y, z, img_width, img_height, fx, fy):
-#     p_x = x * fx / z + img_width / 2
-#     p_y = img_height / 2 - y * fy / z
-#     return p_y, p_x
-
-
 def depthmap2points(image, fx, fy):
     h, w = image.shape
     x, y = np.meshgrid(np.arange(w) + 1, np.arange(h) + 1)
     points = np.zeros((h, w, 3), dtype=np.float32)
     points[:,:,0], points[:,:,1], points[:,:,2] = pixel2world(x, y, image, w, h, fx, fy)
     return points
-
-
-# def points2pixels(points, img_width, img_height, fx, fy):
-#     pixels = np.zeros((points.shape[0], 2))
-#     pixels[:, 0], pixels[:, 1] = \
-#         world2pixel(points[:,0], points[:, 1], points[:, 2], img_width, img_height, fx, fy)
-#     return pixels
 
 
 def load_depthmap(filename, index):
