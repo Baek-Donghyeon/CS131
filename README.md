@@ -3,4 +3,18 @@ This is a pytorch implementation of V2V-PoseNet([V2V-PoseNet: Voxel-to-Voxel Pre
 
 For more information, visit those webpages and download ITOP dataset(https://zenodo.org/record/3932973) and precalculated reference points(https://github.com/mks0601/V2V-PoseNet_RELEASE) in datasets folder.
 
-* Additional visualization demo(draw_skeleton) in experiment folder produces a short video clip with estimated skeleton implemented.
+## Dataset
+Download [ITOP dataset](https://zenodo.org/record/3932973#.Y9JnvT3P1hE) and store it in **/datasets/itop/**
+
+You won't need data for itop center.
+
+## Start
+Begin with
+
+    python experiments/main.py
+  
+## Visualization
+
+    python experiments/draw_skeleton.py
+  
+This would produce a short video clip with estimated skeleton implemented.
